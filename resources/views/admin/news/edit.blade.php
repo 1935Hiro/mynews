@@ -48,6 +48,7 @@
                         </div>
                     </div>
                 </form>
+<<<<<<< HEAD
                 {{-- 以下を追記　--}}
                 <div class="row mt-5">
                     <div class="col-md-4 mx-auto">
@@ -61,6 +62,8 @@
                         </ul>
                     </div>
                 </div>
+=======
+>>>>>>> origin/master
             </div>
         </div>
     </div>

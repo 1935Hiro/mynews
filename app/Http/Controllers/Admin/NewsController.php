@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
@@ -11,6 +12,13 @@ use App\News;
 use Carbon\Carbon;
 
 use Carbon\Carbon;
+=======
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+use App\News;
+
+>>>>>>> origin/master
 
 class NewsController extends Controller
 {
@@ -22,7 +30,11 @@ class NewsController extends Controller
   public function create(Request $request)
   {
 
+<<<<<<< HEAD
       // Varidationを行う
+=======
+      // Varidationをおこなう
+>>>>>>> origin/master
       $this->validate($request, News::$rules);
 
       $news = new News();
@@ -56,12 +68,22 @@ class NewsController extends Controller
       return view('admin.news.index', ['posts' => $posts, 'cond_title' => $cond_title]);
   }
 
+<<<<<<< HEAD
+=======
+  // 以下を追記
+>>>>>>> origin/master
 
   public function edit(Request $request)
   {
       // News Modelからデータを取得する
       $news = News::find($request->id);
+<<<<<<< HEAD
 
+=======
+      if (empty($news)) {
+        abort(404);    
+      }
+>>>>>>> origin/master
       return view('admin.news.edit', ['news_form' => $news]);
   }
 
@@ -78,6 +100,7 @@ class NewsController extends Controller
 
       // 該当するデータを上書きして保存する
       $news->fill($news_form)->save();
+<<<<<<< HEAD
       
         // 以下を追記
         $history = new History();
@@ -90,6 +113,13 @@ class NewsController extends Controller
 
   // 以下を追記　　
   public function delete(Request $request)
+=======
+
+      return redirect('admin/news');
+  }
+  
+    public function delete(Request $request)
+>>>>>>> origin/master
   {
       // 該当するNews Modelを取得
       $news = News::find($request->id);
@@ -97,6 +127,10 @@ class NewsController extends Controller
       $news->delete();
       return redirect('admin/news/');
   }  
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> origin/master

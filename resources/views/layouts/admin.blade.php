@@ -46,7 +46,11 @@
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ml-auto">
+<<<<<<< HEAD
     {{-- 以下を追記 --}}
+=======
+                        {{-- 以下を追記 --}}
+>>>>>>> origin/master
                         <!-- Authentication Links -->
                         {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                         @guest
@@ -72,6 +76,10 @@
                             </li>
                             @endguest
                             {{-- 以上までを追記 --}}
+<<<<<<< HEAD
+=======
+                            
+>>>>>>> origin/master
                         </ul>
                     </div>
                 </div>
