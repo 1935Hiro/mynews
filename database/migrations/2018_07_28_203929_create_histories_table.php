@@ -31,3 +31,4 @@ class CreateHistoriesTable extends Migration
     {
         Schema::dropIfExists('histories');
     }
+}
